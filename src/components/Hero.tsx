@@ -67,6 +67,9 @@ const Hero: React.FC = () => {
                     <a href="#contact" className="btn btn--ghost">
                         Join the Crew
                     </a>
+                    <a href="https://www.paypal.com/donate/?business=q1qooo@gmail.com" target="_blank" rel="noopener noreferrer" className="btn btn--ghost" style={{ borderColor: 'var(--color-gold)', color: 'var(--color-gold)' }}>
+                        Donate 🍻
+                    </a>
                 </div>
             </div>
 
