@@ -13,9 +13,9 @@ const Navbar: React.FC = () => {
     }, []);
 
     const links = [
-        { href: '#trips', label: 'Our Trips' },
+        { href: '#next-trip', label: 'Next Trip' },
+        { href: '#trips', label: 'Past Trips' },
         { href: '#highlights', label: 'About Us' },
-        { href: '#contact', label: 'Next Trip' },
     ];
 
     return (

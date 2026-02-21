@@ -1,6 +1,7 @@
 import './index.css';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
+import NextTrip from './components/NextTrip';
 import Destinations from './components/Destinations';
 import Gallery from './components/Gallery';
 import Highlights from './components/Highlights';
@@ -13,6 +14,7 @@ function App() {
       <Navbar />
       <main>
         <Hero />
+        <NextTrip />
         <Destinations />
         <Gallery />
         <Highlights />
