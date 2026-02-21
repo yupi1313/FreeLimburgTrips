@@ -5,10 +5,33 @@ import './Contact.css';
 const Contact: React.FC = () => {
     const [email, setEmail] = useState('');
     const [submitted, setSubmitted] = useState(false);
+    const [isSubmitting, setIsSubmitting] = useState(false);
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
-        if (email) { setSubmitted(true); setEmail(''); }
+        if (!email) return;
+
+        setIsSubmitting(true);
+        try {
+            // We will replace this with your actual Google Script URL
+            const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbx3Dvu5djggsTfd6T15e_ynAl94eOLlfmlMv6B6KqP7vrU8fblS9-L85JNzZEhkiQxx/exec';
+
+            const formData = new FormData();
+            formData.append('Email', email);
+
+            await fetch(SCRIPT_URL, {
+                method: 'POST',
+                body: formData,
+                mode: 'no-cors', // Bypasses CORS issues with Google Scripts
+            });
+
+            setSubmitted(true);
+            setEmail('');
+        } catch (error) {
+            console.error('Error submitting form', error);
+        } finally {
+            setIsSubmitting(false);
+        }
     };
 
     return (
@@ -38,10 +61,11 @@ const Contact: React.FC = () => {
                                 onChange={e => setEmail(e.target.value)}
                                 required
                                 className="contact__input"
+                                disabled={isSubmitting}
                             />
-                            <button type="submit" className="contact__submit">
+                            <button type="submit" className="contact__submit" disabled={isSubmitting}>
                                 <Send size={18} />
-                                <span>I'm In</span>
+                                <span>{isSubmitting ? "Joining..." : "I'm In"}</span>
                             </button>
                         </div>
                         <p className="contact__note">No spam. Only trip announcements and bad post-match takes.</p>
