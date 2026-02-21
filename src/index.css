@@ -1,0 +1,106 @@
+/* ================================================
+   FreeLimburg Trips — Global Design System
+   ================================================ */
+
+:root {
+  /* Palette */
+  --color-green-deep:   #1a3d2b;
+  --color-green-mid:    #2d6a4f;
+  --color-green-light:  #52b788;
+  --color-green-pale:   #b7e4c7;
+  --color-gold:         #f4a522;
+  --color-gold-light:   #fce097;
+  --color-cream:        #fdf8f0;
+  --color-dark:         #0f1f17;
+  --color-white:        #ffffff;
+  --color-text-primary: #1a2e22;
+  --color-text-muted:   #5a7464;
+
+  /* Gradients */
+  --grad-hero: linear-gradient(135deg, #0f1f17 0%, #1a3d2b 40%, #2d6a4f 100%);
+  --grad-gold: linear-gradient(135deg, #f4a522, #fce097);
+  --grad-card: linear-gradient(160deg, rgba(255,255,255,0.08), rgba(255,255,255,0.02));
+  --grad-section: linear-gradient(180deg, #fdf8f0 0%, #eef7f1 100%);
+
+  /* Typography */
+  --font-heading: 'Outfit', sans-serif;
+  --font-body:    'Inter', sans-serif;
+
+  /* Spacing */
+  --space-xs:  0.5rem;
+  --space-sm:  1rem;
+  --space-md:  1.5rem;
+  --space-lg:  2.5rem;
+  --space-xl:  4rem;
+  --space-2xl: 6rem;
+  --space-3xl: 8rem;
+
+  /* Borders */
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-xl: 40px;
+  --radius-full: 9999px;
+
+  /* Shadows */
+  --shadow-sm:   0 2px 8px rgba(0,0,0,0.08);
+  --shadow-md:   0 8px 32px rgba(0,0,0,0.12);
+  --shadow-lg:   0 20px 60px rgba(0,0,0,0.18);
+  --shadow-gold: 0 8px 32px rgba(244,165,34,0.35);
+
+  /* Transitions */
+  --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+  --duration-fast: 200ms;
+  --duration-normal: 350ms;
+  --duration-slow: 600ms;
+}
+
+/* ---- Reset ---- */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-cream);
+  color: var(--color-text-primary);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+img { display: block; max-width: 100%; }
+a { color: inherit; text-decoration: none; }
+button { cursor: pointer; border: none; outline: none; background: none; font-family: inherit; }
+ul { list-style: none; }
+
+/* ---- Typography Utilities ---- */
+h1, h2, h3, h4, h5 { font-family: var(--font-heading); line-height: 1.15; }
+
+.section-tag {
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  margin-bottom: var(--space-sm);
+}
+
+/* ---- Layout ---- */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-md);
+}
+
+/* ---- Scrollbar ---- */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--color-dark); }
+::-webkit-scrollbar-thumb { background: var(--color-green-mid); border-radius: var(--radius-full); }
+
+/* ---- Selection ---- */
+::selection { background: var(--color-gold); color: var(--color-dark); }
