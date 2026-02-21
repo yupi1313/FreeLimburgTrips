@@ -1,5 +1,5 @@
 import React from 'react';
-import { CalendarDays, MapPin, Beer } from 'lucide-react';
+import { CalendarDays, MapPin, Beer, Car } from 'lucide-react';
 import './NextTrip.css';
 
 const NextTrip: React.FC = () => {
@@ -37,6 +37,17 @@ const NextTrip: React.FC = () => {
                                 <div>
                                     <strong>The Vibe</strong>
                                     <span>Aperol Spritz, Moretti & Calcio</span>
+                                </div>
+                            </div>
+                            <div className="next-trip__detail">
+                                <Car size={20} className="next-trip__icon" />
+                                <div>
+                                    <strong>The Fleet</strong>
+                                    <span>Travelling in style with a white Tesla Model Y & VW Up!</span>
+                                    <div className="next-trip__cars">
+                                        <img src="/tesla_y.png" alt="White Tesla Model Y" className="next-trip__car-img" />
+                                        <img src="/vw_up.png" alt="White VW Up" className="next-trip__car-img" />
+                                    </div>
                                 </div>
                             </div>
                         </div>

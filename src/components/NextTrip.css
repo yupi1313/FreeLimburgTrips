@@ -104,6 +104,20 @@
     color: var(--color-text-muted);
 }
 
+.next-trip__cars {
+    display: flex;
+    gap: var(--space-md);
+    margin-top: var(--space-sm);
+}
+
+.next-trip__car-img {
+    width: 100px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: var(--radius-sm);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
 .next-trip__cta {
     display: inline-flex;
     align-items: center;
