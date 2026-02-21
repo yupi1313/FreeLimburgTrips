@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import { ArrowDown, MapPin, Star } from 'lucide-react';
+import { ArrowDown, Beer, Trophy } from 'lucide-react';
 import './Hero.css';
 
 const Hero: React.FC = () => {
@@ -21,38 +21,36 @@ const Hero: React.FC = () => {
 
     return (
         <section className="hero" ref={heroRef} id="hero">
-            {/* Decorative animated blobs */}
             <div className="hero__blob hero__blob--1" />
             <div className="hero__blob hero__blob--2" />
             <div className="hero__blob hero__blob--3" />
 
-            {/* Floating particles */}
             {[...Array(12)].map((_, i) => (
                 <div key={i} className="hero__particle" style={{ '--i': i } as React.CSSProperties} />
             ))}
 
             <div className="container hero__content">
                 <div className="hero__badge">
-                    <Star size={12} fill="currentColor" />
-                    <span>Limburg's #1 Travel Guide</span>
-                    <Star size={12} fill="currentColor" />
+                    <Beer size={12} />
+                    <span>Limburg's Finest Football Tourists</span>
+                    <Beer size={12} />
                 </div>
 
                 <h1 className="hero__title">
-                    Discover the<br />
-                    <span className="hero__title-accent">Heart of Limburg</span>
+                    Football, Friends<br />
+                    <span className="hero__title-accent">&amp; Loads of Beer</span>
                 </h1>
 
                 <p className="hero__subtitle">
-                    Rolling hills, medieval castles, winding rivers, and world-class cycling routes.
-                    Free Limburg is waiting to be explored — one breathtaking trip at a time.
+                    A group of lads from Limburg travelling Europe to watch football and drink the local beers.
+                    Bilbao, Düsseldorf, Sicily, Rome — and wherever the next match takes us.
                 </p>
 
                 <div className="hero__stats">
                     {[
-                        { value: '50+', label: 'Curated Trips' },
-                        { value: '12', label: 'Regions' },
-                        { value: '4.9★', label: 'Avg Rating' },
+                        { value: '4', label: 'Cities Visited' },
+                        { value: '∞', label: 'Beers Consumed' },
+                        { value: '100%', label: 'Good Times' },
                     ].map(s => (
                         <div className="hero__stat" key={s.label}>
                             <strong>{s.value}</strong>
@@ -62,17 +60,17 @@ const Hero: React.FC = () => {
                 </div>
 
                 <div className="hero__actions">
-                    <a href="#destinations" className="btn btn--primary">
-                        <MapPin size={18} />
-                        Explore Destinations
+                    <a href="#trips" className="btn btn--primary">
+                        <Trophy size={18} />
+                        Our Trips
                     </a>
-                    <a href="#highlights" className="btn btn--ghost">
-                        Watch the Story
+                    <a href="#contact" className="btn btn--ghost">
+                        Join the Crew
                     </a>
                 </div>
             </div>
 
-            <a href="#destinations" className="hero__scroll-hint" aria-label="Scroll down">
+            <a href="#trips" className="hero__scroll-hint" aria-label="Scroll down">
                 <ArrowDown size={20} />
             </a>
         </section>

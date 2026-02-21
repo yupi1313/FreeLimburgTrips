@@ -8,9 +8,9 @@ const Footer: React.FC = () => (
             <div className="footer__brand">
                 <a href="#" className="footer__logo">
                     <MapPin size={20} strokeWidth={2.5} />
-                    <span>FreeLimburg<strong>Trips</strong></span>
+                    <span>Free<strong>LimburgTrips</strong></span>
                 </a>
-                <p className="footer__tagline">Your guide to the most beautiful corner of the Netherlands.</p>
+                <p className="footer__tagline">Lads from Limburg. Football in Europe. Loads of beer.</p>
                 <div className="footer__socials">
                     {[{ icon: Instagram, href: '#' }, { icon: Twitter, href: '#' }, { icon: Github, href: '#' }].map(({ icon: Icon, href }, i) => (
                         <a key={i} href={href} className="footer__social" aria-label="Social link">
@@ -22,25 +22,24 @@ const Footer: React.FC = () => (
 
             <div className="footer__links">
                 <div className="footer__col">
-                    <h5>Explore</h5>
-                    <a href="#destinations">Destinations</a>
-                    <a href="#trips">Trips & Routes</a>
-                    <a href="#highlights">Highlights</a>
-                    <a href="#contact">Newsletter</a>
+                    <h5>Navigate</h5>
+                    <a href="#trips">Our Trips</a>
+                    <a href="#highlights">About Us</a>
+                    <a href="#contact">Join the Crew</a>
                 </div>
                 <div className="footer__col">
-                    <h5>Regions</h5>
-                    <a href="#">Valkenburg</a>
-                    <a href="#">Maastricht</a>
-                    <a href="#">Roermond</a>
-                    <a href="#">Meinweg</a>
+                    <h5>Trips</h5>
+                    <a href="#trips">Bilbao 🇪🇸</a>
+                    <a href="#trips">Düsseldorf 🇩🇪</a>
+                    <a href="#trips">Sicily 🇮🇹</a>
+                    <a href="#trips">Rome 🇮🇹</a>
                 </div>
                 <div className="footer__col">
-                    <h5>Activities</h5>
-                    <a href="#">Cycling</a>
-                    <a href="#">Hiking</a>
-                    <a href="#">Canoeing</a>
-                    <a href="#">City Breaks</a>
+                    <h5>The Rules</h5>
+                    <a href="#">Drink local beer</a>
+                    <a href="#">Watch football</a>
+                    <a href="#">No Heineken</a>
+                    <a href="#">Come back next year</a>
                 </div>
             </div>
         </div>
@@ -48,7 +47,7 @@ const Footer: React.FC = () => (
         <div className="footer__bottom">
             <div className="container footer__bottom-inner">
                 <p>© {new Date().getFullYear()} FreeLimburgTrips. All rights reserved.</p>
-                <p>Built with ❤️ for the love of Limburg.</p>
+                <p>Made with 🍺 somewhere in Limburg.</p>
             </div>
         </div>
     </footer>

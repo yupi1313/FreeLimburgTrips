@@ -13,10 +13,9 @@ const Navbar: React.FC = () => {
     }, []);
 
     const links = [
-        { href: '#destinations', label: 'Destinations' },
-        { href: '#trips', label: 'Trips' },
-        { href: '#highlights', label: 'Highlights' },
-        { href: '#contact', label: 'Contact' },
+        { href: '#trips', label: 'Our Trips' },
+        { href: '#highlights', label: 'About Us' },
+        { href: '#contact', label: 'Next Trip' },
     ];
 
     return (
@@ -34,7 +33,7 @@ const Navbar: React.FC = () => {
                         </a>
                     ))}
                     <a href="#contact" className="navbar__cta" onClick={() => setMenuOpen(false)}>
-                        Plan a Trip
+                        Join the Crew
                     </a>
                 </nav>
 

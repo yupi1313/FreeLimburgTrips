@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Send, Mail } from 'lucide-react';
+import { Send, Beer } from 'lucide-react';
 import './Contact.css';
 
 const Contact: React.FC = () => {
@@ -13,19 +13,18 @@ const Contact: React.FC = () => {
 
     return (
         <section className="contact" id="contact">
-            {/* Decorative blobs */}
             <div className="contact__blob contact__blob--1" />
             <div className="contact__blob contact__blob--2" />
 
             <div className="container contact__inner">
                 <div className="contact__badge">
-                    <Mail size={14} />
-                    <span>Trip Updates</span>
+                    <Beer size={14} />
+                    <span>Next Trip Incoming</span>
                 </div>
-                <h2 className="contact__title">Ready to Explore<br />Free Limburg?</h2>
+                <h2 className="contact__title">Want to Join<br />the Next One?</h2>
                 <p className="contact__subtitle">
-                    Get curated trip ideas, seasonal guides, and local secrets delivered straight to your inbox.
-                    Join over 3,000 Limburg lovers.
+                    Drop your email and we'll let you know when the next trip is being planned.
+                    Fair warning: it involves football, beer, and zero sleep.
                 </p>
 
                 {!submitted ? (
@@ -42,20 +41,20 @@ const Contact: React.FC = () => {
                             />
                             <button type="submit" className="contact__submit">
                                 <Send size={18} />
-                                <span>Subscribe</span>
+                                <span>I'm In</span>
                             </button>
                         </div>
-                        <p className="contact__note">No spam ever. Unsubscribe in one click.</p>
+                        <p className="contact__note">No spam. Only trip announcements and bad post-match takes.</p>
                     </form>
                 ) : (
                     <div className="contact__success">
-                        <span className="contact__success-icon">🎉</span>
-                        <p>You're on the list! Expect your first Limburg guide soon.</p>
+                        <span className="contact__success-icon">🍺</span>
+                        <p>You're on the list! See you at the next match.</p>
                     </div>
                 )}
 
                 <div className="contact__perks">
-                    {['Weekly trip picks', 'Local food guides', 'Event calendars', 'Route maps'].map(p => (
+                    {['Early trip announcements', 'Match day logistics', 'Bar recommendations', 'Legendary stories'].map(p => (
                         <span key={p} className="contact__perk">✓ {p}</span>
                     ))}
                 </div>
