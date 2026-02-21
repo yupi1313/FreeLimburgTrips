@@ -1,37 +1,36 @@
 /* ================================================
-   FreeLimburg Trips — Global Design System
+   FreeLimburg Trips — Design System (freelimburg.nl aligned)
    ================================================ */
 
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700;1,800&family=Outfit:wght@300;400;500;600;700&display=swap');
+
 :root {
-  /* Palette */
-  --color-green-deep:   #1a3d2b;
-  --color-green-mid:    #2d6a4f;
-  --color-green-light:  #52b788;
-  --color-green-pale:   #b7e4c7;
-  --color-gold:         #f4a522;
-  --color-gold-light:   #fce097;
-  --color-cream:        #fdf8f0;
-  --color-dark:         #0f1f17;
-  --color-white:        #ffffff;
-  --color-text-primary: #1a2e22;
-  --color-text-muted:   #5a7464;
+  /* Palette — matches freelimburg.nl */
+  --color-bg: #0f1115;
+  --color-bg-card: #16191f;
+  --color-bg-elevated: #1c2028;
+  --color-gold: #d49a2a;
+  --color-gold-light: #f0be5a;
+  --color-gold-dim: rgba(212, 154, 42, 0.15);
+  --color-white: #f0f0f0;
+  --color-text-muted: #a0a5b0;
+  --color-border: rgba(255, 255, 255, 0.07);
 
   /* Gradients */
-  --grad-hero: linear-gradient(135deg, #0f1f17 0%, #1a3d2b 40%, #2d6a4f 100%);
-  --grad-gold: linear-gradient(135deg, #f4a522, #fce097);
-  --grad-card: linear-gradient(160deg, rgba(255,255,255,0.08), rgba(255,255,255,0.02));
-  --grad-section: linear-gradient(180deg, #fdf8f0 0%, #eef7f1 100%);
+  --grad-gold: linear-gradient(135deg, #d49a2a, #f0be5a);
+  --grad-card: linear-gradient(160deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.01));
+  --grad-overlay: linear-gradient(to top, rgba(15, 17, 21, 0.95) 0%, rgba(15, 17, 21, 0.5) 60%, transparent 100%);
 
   /* Typography */
-  --font-heading: 'Outfit', sans-serif;
-  --font-body:    'Inter', sans-serif;
+  --font-heading: 'Playfair Display', 'Georgia', serif;
+  --font-body: 'Outfit', sans-serif;
 
   /* Spacing */
-  --space-xs:  0.5rem;
-  --space-sm:  1rem;
-  --space-md:  1.5rem;
-  --space-lg:  2.5rem;
-  --space-xl:  4rem;
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2.5rem;
+  --space-xl: 4rem;
   --space-2xl: 6rem;
   --space-3xl: 8rem;
 
@@ -43,10 +42,10 @@
   --radius-full: 9999px;
 
   /* Shadows */
-  --shadow-sm:   0 2px 8px rgba(0,0,0,0.08);
-  --shadow-md:   0 8px 32px rgba(0,0,0,0.12);
-  --shadow-lg:   0 20px 60px rgba(0,0,0,0.18);
-  --shadow-gold: 0 8px 32px rgba(244,165,34,0.35);
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 8px 32px rgba(0, 0, 0, 0.5);
+  --shadow-lg: 0 24px 64px rgba(0, 0, 0, 0.6);
+  --shadow-gold: 0 8px 32px rgba(212, 154, 42, 0.3);
 
   /* Transitions */
   --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
@@ -56,7 +55,13 @@
 }
 
 /* ---- Reset ---- */
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
 html {
   font-size: 16px;
@@ -66,28 +71,53 @@ html {
 
 body {
   font-family: var(--font-body);
-  background-color: var(--color-cream);
-  color: var(--color-text-primary);
+  background-color: var(--color-bg);
+  color: var(--color-white);
   line-height: 1.6;
   overflow-x: hidden;
 }
 
-img { display: block; max-width: 100%; }
-a { color: inherit; text-decoration: none; }
-button { cursor: pointer; border: none; outline: none; background: none; font-family: inherit; }
-ul { list-style: none; }
+img {
+  display: block;
+  max-width: 100%;
+}
 
-/* ---- Typography Utilities ---- */
-h1, h2, h3, h4, h5 { font-family: var(--font-heading); line-height: 1.15; }
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+  font-family: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+/* ---- Typography ---- */
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: var(--font-heading);
+  line-height: 1.15;
+}
 
 .section-tag {
-  font-family: var(--font-heading);
-  font-size: 0.75rem;
+  font-family: var(--font-body);
+  font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--color-gold);
   margin-bottom: var(--space-sm);
+  display: block;
 }
 
 /* ---- Layout ---- */
@@ -97,10 +127,71 @@ h1, h2, h3, h4, h5 { font-family: var(--font-heading); line-height: 1.15; }
   padding: 0 var(--space-md);
 }
 
+/* ---- Buttons ---- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.85rem 2rem;
+  border-radius: var(--radius-full);
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: transform var(--duration-fast) var(--ease-smooth),
+    box-shadow var(--duration-fast) var(--ease-smooth);
+}
+
+.btn--primary {
+  background: var(--grad-gold);
+  color: #1a1400;
+}
+
+.btn--primary:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-gold);
+}
+
+.btn--ghost {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: var(--color-white);
+}
+
+.btn--ghost:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
 /* ---- Scrollbar ---- */
-::-webkit-scrollbar { width: 6px; }
-::-webkit-scrollbar-track { background: var(--color-dark); }
-::-webkit-scrollbar-thumb { background: var(--color-green-mid); border-radius: var(--radius-full); }
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-gold);
+  border-radius: var(--radius-full);
+  opacity: 0.5;
+}
 
 /* ---- Selection ---- */
-::selection { background: var(--color-gold); color: var(--color-dark); }
+::selection {
+  background: var(--color-gold);
+  color: #1a1400;
+}
+
+/* ---- Entry animation ---- */
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

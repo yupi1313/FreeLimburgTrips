@@ -1,6 +1,8 @@
 .highlights {
     padding: var(--space-3xl) 0;
-    background: var(--color-dark);
+    background: var(--color-bg-card);
+    border-top: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
 }
 
 .highlights__grid {
@@ -10,19 +12,25 @@
     align-items: start;
 }
 
-/* Left column */
+/* Left */
 .highlights__title {
-    font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+    font-family: var(--font-heading);
+    font-size: clamp(1.8rem, 3.5vw, 2.8rem);
     font-weight: 800;
     color: var(--color-white);
-    line-height: 1.15;
+    line-height: 1.12;
     margin-bottom: var(--space-md);
+}
+
+.highlights__title em {
+    font-style: italic;
+    color: var(--color-gold);
 }
 
 .highlights__intro {
     font-size: 1rem;
-    color: rgba(255, 255, 255, 0.55);
-    line-height: 1.7;
+    color: var(--color-text-muted);
+    line-height: 1.75;
     margin-bottom: var(--space-lg);
 }
 
@@ -45,9 +53,10 @@
     width: 44px;
     height: 44px;
     border-radius: var(--radius-md);
-    background: rgba(82, 183, 136, 0.12);
-    color: var(--color-green-light);
+    background: rgba(212, 154, 42, 0.1);
+    color: var(--color-gold);
     flex-shrink: 0;
+    border: 1px solid rgba(212, 154, 42, 0.2);
 }
 
 .fact__title {
@@ -60,17 +69,16 @@
 
 .fact__desc {
     font-size: 0.875rem;
-    color: rgba(255, 255, 255, 0.5);
-    line-height: 1.6;
+    color: var(--color-text-muted);
+    line-height: 1.65;
 }
 
-/* Right: Itinerary card */
+/* Right: Itinerary */
 .itinerary {
-    background: rgba(255, 255, 255, 0.04);
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--color-border);
     border-radius: var(--radius-xl);
     padding: var(--space-lg);
-    backdrop-filter: blur(8px);
 }
 
 .itinerary__header {
@@ -78,8 +86,10 @@
 }
 
 .itinerary__heading {
-    font-size: 1.4rem;
-    font-weight: 800;
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 700;
+    font-style: italic;
     color: var(--color-white);
     margin-top: 0.4rem;
 }
@@ -97,8 +107,8 @@
     left: 17px;
     top: 36px;
     bottom: 0;
-    width: 2px;
-    background: rgba(255, 255, 255, 0.07);
+    width: 1px;
+    background: var(--color-border);
 }
 
 .itinerary__dot {
@@ -109,8 +119,8 @@
     height: 36px;
     border-radius: 50%;
     background: var(--grad-gold);
-    color: var(--color-dark);
-    font-family: var(--font-heading);
+    color: #1a1400;
+    font-family: var(--font-body);
     font-weight: 800;
     font-size: 0.8rem;
     flex-shrink: 0;
@@ -118,9 +128,9 @@
 }
 
 .itinerary__day {
-    font-size: 0.7rem;
+    font-size: 0.68rem;
     font-weight: 700;
-    letter-spacing: 0.12em;
+    letter-spacing: 0.14em;
     text-transform: uppercase;
     color: var(--color-gold);
 }
@@ -135,7 +145,7 @@
 
 .itinerary__desc {
     font-size: 0.83rem;
-    color: rgba(255, 255, 255, 0.5);
+    color: var(--color-text-muted);
     line-height: 1.6;
 }
 

@@ -1,17 +1,16 @@
 import React from 'react';
-import { Beer, MapPin, Star, Flame } from 'lucide-react';
 import './Destinations.css';
 
 const trips = [
     {
         id: 1,
         city: 'Bilbao',
-        country: 'Spain 🇪🇸',
+        country: 'Spain',
+        flag: '🇪🇸',
         subtitle: 'Basque Country Road Trip',
         description: "San Mamés, pintxos bars, Txakoli wine and craft beer in the old town. Athletic Club's atmosphere is absolutely wild — pure passion.",
-        icon: Flame,
-        color: '#c0392b',
-        tags: ['Athletic Club', 'Pintxos', 'San Mamés'],
+        image: '/bilbao.png',
+        tags: ['Athletic Club', 'Pintxos', 'Txakoli'],
         size: 'large',
         year: '2023',
         rating: 5.0,
@@ -19,11 +18,11 @@ const trips = [
     {
         id: 2,
         city: 'Düsseldorf',
-        country: 'Germany 🇩🇪',
+        country: 'Germany',
+        flag: '🇩🇪',
         subtitle: 'Altbier Capital',
         description: 'Close to home but epic every time. The Altstadt, 500ml Altbier rounds and a Fortuna game.',
-        icon: Beer,
-        color: '#f39c12',
+        image: '/dusseldorf.png',
         tags: ['Altbier', 'Altstadt', 'Fortuna'],
         size: 'small',
         year: '2022',
@@ -32,12 +31,12 @@ const trips = [
     {
         id: 3,
         city: 'Sicily',
-        country: 'Italy 🇮🇹',
+        country: 'Italy',
+        flag: '🇮🇹',
         subtitle: 'Southern Italian Madness',
         description: 'Arancini, Birra Messina and a local match under the Sicilian sun. Unforgettable chaos.',
-        icon: Star,
-        color: '#e67e22',
-        tags: ['Palermo', 'Street food', 'Serie B vibes'],
+        image: '/sicily.png',
+        tags: ['Palermo', 'Birra Messina', 'Serie B vibes'],
         size: 'small',
         year: '2023',
         rating: 4.9,
@@ -45,11 +44,11 @@ const trips = [
     {
         id: 4,
         city: 'Rome',
-        country: 'Italy 🇮🇹',
+        country: 'Italy',
+        flag: '🇮🇹',
         subtitle: 'Eternal City, Eternal Hangover',
         description: 'A Roma or Lazio match at the Stadio Olimpico, Peroni on every corner, and cobblestone bar-crawls till sunrise.',
-        icon: MapPin,
-        color: '#8e44ad',
+        image: '/rome.png',
         tags: ['Stadio Olimpico', 'Peroni', 'AS Roma'],
         size: 'medium',
         year: '2024',
@@ -57,52 +56,51 @@ const trips = [
     },
 ];
 
-const StarRating: React.FC<{ rating: number }> = ({ rating }) => (
-    <span className="dest-card__rating">★ {rating.toFixed(1)}</span>
-);
-
 const Destinations: React.FC = () => (
     <section className="destinations" id="trips">
         <div className="container">
             <div className="section-header">
-                <p className="section-tag">The Trip Log</p>
+                <span className="section-tag">The Trip Log</span>
                 <h2 className="section-title">Where We've Been</h2>
                 <p className="section-desc">
-                    Four cities, countless beers, and one shared love for football. Here's every trip so far.
+                    Four cities. Countless beers. One shared love for football.
                 </p>
             </div>
 
             <div className="destinations__grid">
-                {trips.map(trip => {
-                    const Icon = trip.icon;
-                    return (
-                        <div
-                            key={trip.id}
-                            className={`dest-card dest-card--${trip.size}`}
-                            style={{ '--accent': trip.color } as React.CSSProperties}
-                        >
-                            <div className="dest-card__glow" />
-                            <div className="dest-card__icon">
-                                <Icon size={24} strokeWidth={1.8} />
-                            </div>
-                            <div className="dest-card__body">
-                                <p className="dest-card__subtitle">{trip.country} · {trip.subtitle}</p>
-                                <h3 className="dest-card__title">{trip.city}</h3>
-                                {trip.size !== 'small' && (
-                                    <p className="dest-card__desc">{trip.description}</p>
-                                )}
-                                <div className="dest-card__meta">
-                                    <StarRating rating={trip.rating} />
-                                    <span className="dest-card__duration">📅 {trip.year}</span>
-                                </div>
-                                <div className="dest-card__tags">
-                                    {trip.tags.map(t => <span key={t} className="tag">{t}</span>)}
-                                </div>
-                            </div>
-                            <div className="dest-card__arrow">→</div>
+                {trips.map(trip => (
+                    <div
+                        key={trip.id}
+                        className={`trip-card trip-card--${trip.size}`}
+                    >
+                        {/* Photo */}
+                        <div className="trip-card__img-wrap">
+                            <img src={trip.image} alt={`${trip.city} stadium`} className="trip-card__img" />
+                            <div className="trip-card__overlay" />
                         </div>
-                    );
-                })}
+
+                        {/* Label on top */}
+                        <div className="trip-card__top">
+                            <span className="trip-card__flag">{trip.flag}</span>
+                            <span className="trip-card__rating">★ {trip.rating.toFixed(1)}</span>
+                        </div>
+
+                        {/* Content at bottom */}
+                        <div className="trip-card__body">
+                            <p className="trip-card__subtitle">{trip.country} · {trip.subtitle}</p>
+                            <h3 className="trip-card__title">{trip.city}</h3>
+                            {trip.size !== 'small' && (
+                                <p className="trip-card__desc">{trip.description}</p>
+                            )}
+                            <div className="trip-card__tags">
+                                {trip.tags.map(t => <span key={t} className="trip-tag">{t}</span>)}
+                            </div>
+                            <div className="trip-card__meta">
+                                <span className="trip-card__year">📅 {trip.year}</span>
+                            </div>
+                        </div>
+                    </div>
+                ))}
             </div>
         </div>
     </section>
