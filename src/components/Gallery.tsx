@@ -3,24 +3,24 @@ import './Gallery.css';
 
 // All 18 real trip photos
 const photos = [
-    '/photos/19ee782f-b542-4b85-bfaf-53f0f4a17877.jpg',
-    '/photos/32a189ff-dd6e-4f1e-b627-307d02f298b3.jpg',
-    '/photos/3d1d7215-6de1-4223-93a1-71e23af2f423.jpg',
-    '/photos/51bca8bf-6845-4b4d-ae68-e62b2e3ca549.jpg',
+    '/photos/stylized_19ee_1771789918364.png',
+    '/photos/stylized_32a1_1771789934264.png',
+    '/photos/stylized_3d1d_1771789950595.png',
+    '/photos/stylized_51bc_1771789975434.png',
     '/photos/5c04152c-8d04-4c6b-8ece-8892a76ee16b.jpg',
     '/photos/6811550b-c6b8-4438-82db-40c14d1d19ac.jpg',
     '/photos/810974f8-06d7-49b8-b986-96e8bbca2b11.jpg',
     '/photos/8e1b4463-4561-4855-8c3f-41d9e85b47e8.jpg',
     '/photos/9dace6e4-33b7-4caa-97a3-753eb5877553.jpg',
     '/photos/img_8044.jpg',
-    '/photos/img_8231.jpg',
-    '/photos/img_8254.jpg',
-    '/photos/img_9750.jpg',
-    '/photos/img_9804.jpg',
-    '/photos/img_9830.jpg',
-    '/photos/e679d508-fe70-43f8-b0cb-3a9841091731.jpg',
+    '/photos/stylized_8231_1771789629464.png',
+    '/photos/stylized_8254_1771789645684.png',
+    '/photos/stylized_9750_1771789663946.png',
+    '/photos/stylized_9804_1771789681342.png',
+    '/photos/stylized_9830_1771789860527.png',
+    '/photos/stylized_e679_1771789875831.png',
     '/photos/f17857a0-ce0f-4ce1-bcf2-2e407db1915e.jpg',
-    '/photos/ffb10168-79c0-4041-9e67-dafd29a653a3.jpg',
+    '/photos/stylized_ffb1_1771789901755.png',
 ];
 
 interface LightboxProps {
@@ -77,24 +77,27 @@ const Gallery: React.FC = () => {
                 </div>
 
                 <div className="gallery__grid">
-                    {photos.map((src, idx) => (
-                        <button
-                            key={src}
-                            className="gallery__item"
-                            onClick={() => openPhoto(idx)}
-                            aria-label={`View photo ${idx + 1}`}
-                        >
-                            <img
-                                src={src}
-                                alt={`Trip photo ${idx + 1}`}
-                                className="gallery__img"
-                                loading="lazy"
-                            />
-                            <div className="gallery__hover">
-                                <span className="gallery__zoom">⊕</span>
-                            </div>
-                        </button>
-                    ))}
+                    {photos.map((src, idx) => {
+                        const isStylized = src.includes('stylized_');
+                        return (
+                            <button
+                                key={src}
+                                className={`gallery__item ${isStylized ? 'gallery__item--stylized' : ''}`}
+                                onClick={() => openPhoto(idx)}
+                                aria-label={`View photo ${idx + 1}`}
+                            >
+                                <img
+                                    src={src}
+                                    alt={`Trip photo ${idx + 1}`}
+                                    className="gallery__img"
+                                    loading="lazy"
+                                />
+                                <div className="gallery__hover">
+                                    <span className="gallery__zoom">⊕</span>
+                                </div>
+                            </button>
+                        );
+                    })}
                 </div>
             </div>
 

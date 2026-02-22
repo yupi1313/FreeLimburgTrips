@@ -58,12 +58,22 @@
     height: auto;
     display: block;
     object-fit: cover;
+    /* Default filter for the original non-AI photos */
     filter: sepia(0.6) contrast(1.2) brightness(0.8) grayscale(0.2);
     transition: filter var(--duration-normal) var(--ease-smooth);
 }
 
 .gallery__item:hover .gallery__img {
     filter: sepia(0) contrast(1.05) brightness(1) grayscale(0);
+}
+
+/* For images that are already stylized by AI, we remove the CSS filter */
+.gallery__item--stylized .gallery__img {
+    filter: none;
+}
+
+.gallery__item--stylized:hover .gallery__img {
+    filter: brightness(1.1);
 }
 
 /* Hover overlay */
