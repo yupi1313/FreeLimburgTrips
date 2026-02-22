@@ -1,5 +1,6 @@
 import React from 'react';
 import Hero from '../components/Hero';
+import TheCrew from '../components/TheCrew';
 import NextTrip from '../components/NextTrip';
 import Destinations from '../components/Destinations';
 import Gallery from '../components/Gallery';
@@ -9,6 +10,7 @@ const Home: React.FC = () => {
     return (
         <main>
             <Hero />
+            <TheCrew />
             <NextTrip />
             <Destinations />
             <Gallery />

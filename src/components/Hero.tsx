@@ -31,19 +31,18 @@ const Hero: React.FC = () => {
 
             <div className="container hero__content">
                 <div className="hero__badge">
-                    <Beer size={12} />
-                    <span>Limburg's Finest Football Tourists</span>
-                    <Beer size={12} />
+                    <Beer size={14} />
+                    <span>The Free Limburg Firm</span>
+                    <Beer size={14} />
                 </div>
 
                 <h1 className="hero__title">
-                    Football, Friends<br />
-                    <span className="hero__title-accent">&amp; Loads of Beer</span>
+                    FOOTBALL, PINTS<br />
+                    <span className="hero__title-accent">& PROPER MAYHEM</span>
                 </h1>
 
                 <p className="hero__subtitle">
-                    A group of lads from Limburg travelling Europe to watch football and drink the local beers.
-                    Bilbao, Düsseldorf, Sicily, Rome — and wherever the next match takes us.
+                    A proper firm from Limburg. We travel the continent, hit the stands, and empty the taps. Bilbao, Düsseldorf, Sicily, Rome — no away end is safe. We're the boys your mother warned you about.
                 </p>
 
                 <div className="hero__stats">

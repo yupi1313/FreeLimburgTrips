@@ -2,28 +2,35 @@
    FreeLimburg Trips — Design System (freelimburg.nl aligned)
    ================================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700;1,800&family=Outfit:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700&family=Special+Elite&display=swap');
 
 :root {
-  /* Palette — matches freelimburg.nl */
-  --color-bg: #0f1115;
-  --color-bg-card: #16191f;
-  --color-bg-elevated: #1c2028;
-  --color-gold: #d49a2a;
-  --color-gold-light: #f0be5a;
-  --color-gold-dim: rgba(212, 154, 42, 0.15);
-  --color-white: #f0f0f0;
-  --color-text-muted: #a0a5b0;
-  --color-border: rgba(255, 255, 255, 0.07);
+  /* Palette — Guy Ritchie Style */
+  --color-bg: #110e0c;
+  /* Deep, warm charcoal */
+  --color-bg-card: #1a1511;
+  --color-bg-elevated: #241d18;
+  --color-gold: #c28e20;
+  /* Darker, rusty gold */
+  --color-gold-light: #e6b145;
+  --color-gold-dim: rgba(194, 142, 32, 0.15);
+  --color-red: #800000;
+  /* Deep blood red */
+  --color-white: #e6e1d6;
+  /* Grimy off-white */
+  --color-text-muted: #8c857b;
+  --color-border: rgba(230, 225, 214, 0.1);
 
   /* Gradients */
-  --grad-gold: linear-gradient(135deg, #d49a2a, #f0be5a);
-  --grad-card: linear-gradient(160deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.01));
-  --grad-overlay: linear-gradient(to top, rgba(15, 17, 21, 0.95) 0%, rgba(15, 17, 21, 0.5) 60%, transparent 100%);
+  --grad-gold: linear-gradient(135deg, #c28e20, #996e14);
+  --grad-red: linear-gradient(135deg, #800000, #4d0000);
+  --grad-card: linear-gradient(160deg, rgba(230, 225, 214, 0.04), rgba(230, 225, 214, 0.01));
+  --grad-overlay: linear-gradient(to top, rgba(17, 14, 12, 1) 0%, rgba(17, 14, 12, 0.6) 50%, transparent 100%);
 
   /* Typography */
-  --font-heading: 'Playfair Display', 'Georgia', serif;
+  --font-heading: 'Bebas Neue', sans-serif;
   --font-body: 'Outfit', sans-serif;
+  --font-accent: 'Special Elite', monospace;
 
   /* Spacing */
   --space-xs: 0.5rem;
@@ -35,17 +42,19 @@
   --space-3xl: 8rem;
 
   /* Borders */
-  --radius-sm: 8px;
-  --radius-md: 16px;
-  --radius-lg: 24px;
-  --radius-xl: 40px;
+  --radius-sm: 4px;
+  /* Harder edges for gritty look */
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 20px;
   --radius-full: 9999px;
 
   /* Shadows */
-  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
-  --shadow-md: 0 8px 32px rgba(0, 0, 0, 0.5);
-  --shadow-lg: 0 24px 64px rgba(0, 0, 0, 0.6);
-  --shadow-gold: 0 8px 32px rgba(212, 154, 42, 0.3);
+  --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.5);
+  --shadow-md: 0 12px 32px rgba(0, 0, 0, 0.7);
+  --shadow-lg: 0 24px 64px rgba(0, 0, 0, 0.8);
+  --shadow-gold: 0 8px 32px rgba(194, 142, 32, 0.3);
+  --shadow-red: 0 8px 32px rgba(128, 0, 0, 0.4);
 
   /* Transitions */
   --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
