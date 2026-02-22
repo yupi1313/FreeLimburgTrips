@@ -1,0 +1,364 @@
+.como-page {
+    padding-bottom: 4rem;
+}
+
+/* Hero Section */
+.como-page__hero {
+    position: relative;
+    height: 60vh;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.como-page__hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.como-page__hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(10, 10, 10, 0.4), rgba(10, 10, 10, 0.9));
+    z-index: 2;
+}
+
+.como-page__hero-content {
+    position: relative;
+    z-index: 3;
+    width: 100%;
+}
+
+.como-page__back {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--color-text-muted);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+    transition: color 0.2s ease;
+}
+
+.como-page__back:hover {
+    color: var(--color-primary);
+}
+
+.como-page__badge {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 0.4rem 1rem;
+    border-radius: 2rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+}
+
+.como-page__title {
+    font-size: clamp(3rem, 8vw, 5rem);
+    font-weight: 800;
+    line-height: 1;
+    margin-bottom: 1rem;
+    letter-spacing: -0.02em;
+}
+
+.como-page__title em {
+    font-style: normal;
+    color: var(--color-primary);
+    display: inline-block;
+    position: relative;
+}
+
+.como-page__title em::after {
+    content: '';
+    position: absolute;
+    bottom: 0.1em;
+    left: 0;
+    width: 100%;
+    height: 0.2em;
+    background: var(--color-primary);
+    opacity: 0.3;
+    z-index: -1;
+    transform: rotate(-2deg);
+}
+
+.como-page__subtitle {
+    font-size: clamp(1.1rem, 2vw, 1.4rem);
+    color: var(--color-text-muted);
+    max-width: 600px;
+}
+
+/* Main Grid Layout */
+.como-page__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    position: relative;
+    z-index: 4;
+    margin-top: -3rem;
+}
+
+@media (min-width: 900px) {
+    .como-page__grid {
+        grid-template-columns: 1fr 350px;
+        gap: 4rem;
+    }
+}
+
+/* Left Column: Details */
+.como-page__details {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.como-section {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 1.5rem;
+    padding: 2.5rem;
+}
+
+.como-section h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+.como-section__text {
+    color: var(--color-text-muted);
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 2rem;
+}
+
+.como-features {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+@media (min-width: 600px) {
+    .como-features {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.como-feature {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.como-feature__icon {
+    color: var(--color-primary);
+}
+
+.como-feature h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.como-feature p {
+    color: var(--color-text-muted);
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+.como-stadium {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    border-radius: 1rem;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--color-border);
+}
+
+.como-stadium__img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.como-stadium__info {
+    padding: 0 1.5rem 1.5rem;
+}
+
+.como-stadium__info h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+}
+
+.como-stadium__info p {
+    color: var(--color-text-muted);
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.como-stadium__meta {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--color-text-muted);
+    font-size: 0.85rem;
+}
+
+.como-stadium__meta span {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+/* Right Column: Sidebar */
+.como-page__sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.como-card {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 1.5rem;
+    padding: 2rem;
+}
+
+@media (min-width: 900px) {
+    .como-page__sidebar {
+        position: sticky;
+        top: 6rem;
+    }
+}
+
+.como-card h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: var(--color-primary);
+}
+
+.como-card__desc {
+    color: var(--color-text-muted);
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+}
+
+.como-logistics {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.como-logistics li {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.como-logistics li svg {
+    color: var(--color-text-muted);
+    flex-shrink: 0;
+    margin-top: 0.2rem;
+}
+
+.como-logistics li div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.como-logistics li strong {
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.como-logistics li span {
+    color: var(--color-text-muted);
+    font-size: 0.85rem;
+    line-height: 1.4;
+}
+
+.como-fleet {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.como-fleet__item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: rgba(255, 255, 255, 0.03);
+    padding: 0.75rem;
+    border-radius: 0.75rem;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.como-fleet__item img {
+    width: 60px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.como-fleet__item span {
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+.como-card--cta {
+    background: linear-gradient(135deg, rgba(255, 204, 0, 0.1), rgba(255, 107, 0, 0.05));
+    border-color: rgba(255, 204, 0, 0.2);
+    text-align: center;
+}
+
+.como-card--cta h3 {
+    color: #fff;
+    margin-bottom: 0.5rem;
+}
+
+.como-card--cta p {
+    color: var(--color-text-muted);
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+}
+
+.como-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 1rem;
+    background: linear-gradient(135deg, var(--color-primary), #FF6B00);
+    color: #000;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 0.75rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.como-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(255, 204, 0, 0.3);
+}

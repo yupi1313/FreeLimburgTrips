@@ -1,27 +1,20 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './index.css';
 import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import NextTrip from './components/NextTrip';
-import Destinations from './components/Destinations';
-import Gallery from './components/Gallery';
-import Highlights from './components/Highlights';
-import Contact from './components/Contact';
+import Home from './pages/Home';
+import ComoTrip from './pages/ComoTrip';
 import Footer from './components/Footer';
 
 function App() {
   return (
-    <>
+    <Router>
       <Navbar />
-      <main>
-        <Hero />
-        <NextTrip />
-        <Destinations />
-        <Gallery />
-        <Highlights />
-        <Contact />
-      </main>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/como" element={<ComoTrip />} />
+      </Routes>
       <Footer />
-    </>
+    </Router>
   );
 }
 

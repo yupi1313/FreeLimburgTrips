@@ -21,18 +21,18 @@ const Navbar: React.FC = () => {
     return (
         <header className={`navbar ${scrolled ? 'navbar--scrolled' : ''}`}>
             <div className="container navbar__inner">
-                <a href="#" className="navbar__logo">
+                <a href="/" className="navbar__logo">
                     <MapPin size={22} strokeWidth={2.5} />
                     <span>FreeLimburg<strong>Trips</strong></span>
                 </a>
 
                 <nav className={`navbar__nav ${menuOpen ? 'navbar__nav--open' : ''}`}>
                     {links.map(l => (
-                        <a key={l.href} href={l.href} className="navbar__link" onClick={() => setMenuOpen(false)}>
+                        <a key={l.href} href={`/${l.href}`} className="navbar__link" onClick={() => setMenuOpen(false)}>
                             {l.label}
                         </a>
                     ))}
-                    <a href="#contact" className="navbar__cta" onClick={() => setMenuOpen(false)}>
+                    <a href="/#contact" className="navbar__cta" onClick={() => setMenuOpen(false)}>
                         Join the Crew
                     </a>
                 </nav>

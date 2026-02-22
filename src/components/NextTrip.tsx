@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { CalendarDays, MapPin, Beer, Car } from 'lucide-react';
 import './NextTrip.css';
 
@@ -52,7 +53,7 @@ const NextTrip: React.FC = () => {
                             </div>
                         </div>
 
-                        <a href="#contact" className="next-trip__cta">Join the Crew</a>
+                        <Link to="/como" className="next-trip__cta">Explore the Trip</Link>
                     </div>
 
                     <div className="next-trip__visuals">
