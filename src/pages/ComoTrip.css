@@ -331,22 +331,23 @@
 .como-fleet__item {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 1.5rem;
     background: rgba(255, 255, 255, 0.03);
-    padding: 0.75rem;
-    border-radius: 0.75rem;
+    padding: 1.25rem;
+    border-radius: 1rem;
     border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .como-fleet__item img {
-    width: 90px;
-    height: 60px;
-    object-fit: contain;
+    width: 160px;
+    height: 110px;
+    object-fit: cover;
+    border-radius: 0.5rem;
 }
 
 .como-fleet__item span {
-    font-size: 0.95rem;
-    font-weight: 500;
+    font-size: 1.2rem;
+    font-weight: 600;
 }
 
 .como-card--cta {
