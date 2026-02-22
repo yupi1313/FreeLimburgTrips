@@ -14,7 +14,7 @@ const Contact: React.FC = () => {
         setIsSubmitting(true);
         try {
             // We will replace this with your actual Google Script URL
-            const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbx3Dvu5djggsTfd6T15e_ynAl94eOLlfmlMv6B6KqP7vrU8fblS9-L85JNzZEhkiQxx/exec';
+            const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbx3Dvu5djggsTfd6T15e_ynAI94eOLIfmlMv6B6KqP7vrU8fbIS9-L85JNzZEhkiQxx/exec';
 
             const params = new URLSearchParams();
             params.append('Email', email);
