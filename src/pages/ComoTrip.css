@@ -22,6 +22,15 @@
     z-index: 1;
 }
 
+@media (max-width: 768px) {
+    .como-page__hero-bg {
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: top center;
+        object-fit: contain;
+    }
+}
+
 .como-page__hero-overlay {
     position: absolute;
     top: 0;
