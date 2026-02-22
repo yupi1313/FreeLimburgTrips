@@ -16,12 +16,12 @@ const Contact: React.FC = () => {
             // We will replace this with your actual Google Script URL
             const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbx3Dvu5djggsTfd6T15e_ynAl94eOLlfmlMv6B6KqP7vrU8fblS9-L85JNzZEhkiQxx/exec';
 
-            const formData = new FormData();
-            formData.append('Email', email);
+            const params = new URLSearchParams();
+            params.append('Email', email);
 
             await fetch(SCRIPT_URL, {
                 method: 'POST',
-                body: formData,
+                body: params,
                 mode: 'no-cors', // Bypasses CORS issues with Google Scripts
             });
 
