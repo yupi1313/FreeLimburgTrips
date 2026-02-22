@@ -35,15 +35,6 @@ const ComoTrip: React.FC = () => {
                                 Get ready for an unforgettable weekend. We're heading to Northern Italy, where the Alps meet the water. Expect stunning scenery, sunny skies, incredible Italian food, and of course, the beautiful game played right by the lake.
                             </p>
 
-                            {/* Placeholder for manual photo upload */}
-                            <div className="como-custom-photo" style={{ marginBottom: '2rem' }}>
-                                <img
-                                    src="/photos/Como/1.jpg"
-                                    alt="Lake Como Vibe"
-                                    style={{ width: '100%', borderRadius: '1rem', objectFit: 'cover' }}
-                                />
-                            </div>
-
                             <div className="como-features">
                                 <div className="como-feature">
                                     <Sun size={24} className="como-feature__icon" />
