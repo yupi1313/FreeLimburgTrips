@@ -29,6 +29,13 @@ const characters = [
         role: "The Wildcard",
         image: "/photos/characters/dimon.jpg",
         description: "Serjoga Davai Vstavai. Unpredictable. Might buy the next round, might start a riot."
+    },
+    {
+        id: 'sanja_print',
+        name: "Sanja",
+        role: "Eto ja raspe4tayu",
+        image: "/photos/characters/sanja_print.jpg",
+        description: "Always has the away block tickets printed and ready to go."
     }
 ];
 

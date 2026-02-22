@@ -22,6 +22,15 @@
     opacity: 0.9;
 }
 
+@media (max-width: 768px) {
+    .hero::before {
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: top center;
+        background-color: var(--color-bg);
+    }
+}
+
 .hero::after {
     content: '';
     position: absolute;
