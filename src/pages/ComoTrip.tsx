@@ -64,6 +64,19 @@ const ComoTrip: React.FC = () => {
                                 </div>
                             </div>
                         </section>
+
+                        <section className="como-section">
+                            <h2>Trip Highlights</h2>
+                            <p className="como-section__text">
+                                Sneak peak at the good times and away day memories from the Free Limburg Firm.
+                            </p>
+                            <div className="como-gallery">
+                                <img src="/photos/img_8044.jpg" alt="Como highlight 1" />
+                                <img src="/photos/img_8231.jpg" alt="Como highlight 2" />
+                                <img src="/photos/img_8254.jpg" alt="Como highlight 3" />
+                                <img src="/photos/img_9750.jpg" alt="Como highlight 4" />
+                            </div>
+                        </section>
                     </div>
 
                     {/* Right Column: Logistics */}

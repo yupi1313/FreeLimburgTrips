@@ -58,11 +58,12 @@
     height: auto;
     display: block;
     object-fit: cover;
+    filter: sepia(0.6) contrast(1.2) brightness(0.8) grayscale(0.2);
     transition: filter var(--duration-normal) var(--ease-smooth);
 }
 
 .gallery__item:hover .gallery__img {
-    filter: brightness(0.75);
+    filter: sepia(0) contrast(1.05) brightness(1) grayscale(0);
 }
 
 /* Hover overlay */
@@ -116,6 +117,7 @@
     object-fit: contain;
     border-radius: var(--radius-md);
     box-shadow: 0 32px 96px rgba(0, 0, 0, 0.8);
+    filter: sepia(0.3) contrast(1.15) brightness(0.9);
     animation: zoomIn 0.25s var(--ease-smooth) both;
 }
 

@@ -227,6 +227,28 @@
     gap: 0.4rem;
 }
 
+/* Gallery Section */
+.como-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.como-gallery img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 0.75rem;
+    border: 1px solid var(--color-border);
+    transition: transform var(--duration-normal) var(--ease-smooth);
+}
+
+.como-gallery img:hover {
+    transform: scale(1.02);
+    border-color: var(--color-primary);
+}
+
 /* Right Column: Sidebar */
 .como-page__sidebar {
     display: flex;
