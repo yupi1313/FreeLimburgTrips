@@ -27,14 +27,14 @@ const characters = [
         id: 'dimon',
         name: "Dimon",
         role: "The Wildcard",
-        image: "/photos/characters/dimon.jpg",
+        image: "/photos/characters/serega.jpeg",
         description: "Serjoga Davai Vstavai. Unpredictable. Might buy the next round, might start a riot."
     },
     {
-        id: 'serega',
-        name: "Serega",
+        id: 'sanja2',
+        name: "Sanja",
         role: "The New Blood",
-        image: "/photos/characters/serega.jpeg",
+        image: "/photos/characters/sanja2.jpeg",
         description: "A solid lad. Ready for the next away day."
     }
 ];
