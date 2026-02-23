@@ -27,7 +27,7 @@ const characters = [
         id: 'dimon',
         name: "Dimon",
         role: "The Wildcard",
-        image: "/photos/characters/dimon.jpg",
+        image: "/photos/characters/dimon2.jpeg",
         description: "Serjoga Davai Vstavai. Unpredictable. Might buy the next round, might start a riot."
     },
     {
