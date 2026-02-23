@@ -138,6 +138,23 @@ const ComoRealTrip: React.FC = () => {
                     </div>
                 </div>
             </div>
+
+            {/* Closing Video Section */}
+            <div className="como-page__closing">
+                <video
+                    src="/como_bg2.mp4"
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    className="como-page__closing-video"
+                />
+                <div className="como-page__closing-overlay"></div>
+                <div className="container como-page__closing-content">
+                    <h2>See you in Italy.</h2>
+                    <p>The ultimate away day awaits.</p>
+                </div>
+            </div>
         </div>
     );
 };

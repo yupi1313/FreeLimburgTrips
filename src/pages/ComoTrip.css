@@ -405,3 +405,58 @@
     transform: translateY(-2px);
     box-shadow: 0 4px 15px rgba(255, 204, 0, 0.3);
 }
+
+/* Closing Video Section */
+.como-page__closing {
+    position: relative;
+    height: 60vh;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    margin-top: 4rem;
+    border-top: 1px solid var(--color-border);
+}
+
+.como-page__closing-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    background-color: #000;
+    z-index: 1;
+}
+
+.como-page__closing-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(10, 10, 10, 0.9), rgba(10, 10, 10, 0.2));
+    z-index: 2;
+}
+
+.como-page__closing-content {
+    position: relative;
+    z-index: 3;
+    padding: 0 2rem;
+}
+
+.como-page__closing-content h2 {
+    font-family: var(--font-heading);
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 800;
+    color: var(--color-white);
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.05em;
+}
+
+.como-page__closing-content p {
+    font-size: 1.2rem;
+    color: var(--color-text-muted);
+}

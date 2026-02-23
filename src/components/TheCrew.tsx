@@ -31,17 +31,10 @@ const characters = [
         description: "Serjoga Davai Vstavai. Unpredictable. Might buy the next round, might start a riot."
     },
     {
-        id: 'sanja_print',
-        name: "Sanja",
-        role: "Eto ja raspe4tayu",
-        image: "/photos/characters/sanja_print.jpg",
-        description: "Always has the away block tickets printed and ready to go."
-    },
-    {
         id: 'sanja2',
         name: "Sanja",
         role: "The New Blood",
-        image: "/photos/characters/sanja2.jpg",
+        image: "/photos/characters/sanja2.jpeg",
         description: "A solid lad. Ready for the next away day."
     }
 ];
