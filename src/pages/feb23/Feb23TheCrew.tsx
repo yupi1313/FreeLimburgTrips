@@ -29,6 +29,13 @@ const characters = [
         role: "Голос Хаоса",
         image: "/photos/characters/dimon.jpg",
         description: "Серега давай вставай. Может купить всем пива, а может начать бунт."
+    },
+    {
+        id: 'sanja2',
+        name: "Саня",
+        role: "Новая кровь",
+        image: "/photos/characters/sanja2.jpeg",
+        description: "Ровный пацан. Всегда готов к следующему выезду."
     }
 ];
 
