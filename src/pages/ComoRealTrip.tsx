@@ -13,7 +13,14 @@ const ComoRealTrip: React.FC = () => {
         <div className="como-page">
             <div className="como-page__hero">
                 <div className="como-page__hero-overlay"></div>
-                <img src="/como_lake.png" alt="Lake Como" className="como-page__hero-bg" />
+                <video
+                    src="/como_bg.mp4"
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    className="como-page__hero-video"
+                />
                 <div className="container como-page__hero-content">
                     <Link to="/" className="como-page__back">
                         <ArrowLeft size={20} />
