@@ -62,7 +62,7 @@ const Feb23Hero: React.FC = () => {
             <div className="hero__poster">
                 <div className="hero__poster-noise" />
                 <div className="hero__poster-vignette" />
-                <img src="/photos/characters/group.jpg" alt="The Lads" className="hero__poster-img" />
+                <img src="/limburg_military.png" alt="The Lads" className="hero__poster-img" />
             </div>
         </section>
     );

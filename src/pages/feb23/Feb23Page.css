@@ -47,3 +47,21 @@
     /* If it's already a Guy Ritchie stylized image, we leave it alone or slightly tint it */
     filter: sepia(0.2) hue-rotate(20deg);
 }
+
+/* Mobile Layout Fixes for Long Russian Translation Strings */
+@media (max-width: 600px) {
+    .theme-feb23 .hero__badge span {
+        font-size: 0.75rem;
+        /* Scale down the long "С Днем Защитника Отечества" badge */
+        letter-spacing: 0.05em;
+    }
+
+    .theme-feb23 .hero__title {
+        font-size: clamp(2.5rem, 10vw, 4rem);
+        /* Scale down "НАСТОЯЩИЕ МУЖИКИ" */
+    }
+
+    .theme-feb23 .hero__title-accent {
+        font-size: clamp(2rem, 8vw, 3rem);
+    }
+}

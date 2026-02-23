@@ -26,7 +26,7 @@ const characters = [
     {
         id: 'dimon',
         name: "Димон",
-        role: "Непредсказуемый",
+        role: "Голос Хаоса",
         image: "/photos/characters/dimon.jpg",
         description: "Серега давай вставай. Может купить всем пива, а может начать бунт."
     },
