@@ -1,0 +1,49 @@
+.theme-feb23 {
+    /* Khaki / Military Palette */
+    --color-bg: #1c1f19;
+    --color-bg-card: #282c24;
+    --color-bg-elevated: #353a2f;
+
+    /* Soviet / Military Red replacing Gold */
+    --color-gold: #d32f2f;
+    --color-gold-light: #f44336;
+    --color-gold-dim: rgba(211, 47, 47, 0.15);
+
+    /* Deeper red */
+    --color-red: #b71c1c;
+
+    /* Slightly greenish off-white */
+    --color-white: #e3ebd8;
+    --color-text-muted: #959c8e;
+
+    /* Red Gradients */
+    --grad-gold: linear-gradient(135deg, #d32f2f, #9a0007);
+    --grad-card: linear-gradient(160deg, rgba(227, 235, 216, 0.04), rgba(227, 235, 216, 0.01));
+    --grad-overlay: linear-gradient(to top, rgba(28, 31, 25, 1) 0%, rgba(28, 31, 25, 0.6) 50%, transparent 100%);
+}
+
+/* Specific component overrides for Feb23 theme */
+.theme-feb23 .hero__poster-img {
+    filter: sepia(0.5) hue-rotate(60deg) saturate(0.8) contrast(1.2);
+}
+
+.theme-feb23 .crew__card-stamp {
+    color: #d32f2f;
+    border-color: #d32f2f;
+}
+
+.theme-feb23 .hero__badge {
+    color: #f44336;
+    border-color: rgba(244, 67, 54, 0.2);
+    background: rgba(244, 67, 54, 0.1);
+}
+
+.theme-feb23 .gallery-grid img {
+    /* Make untreated images look a bit more khaki/vintage instead of just sepia */
+    filter: sepia(0.3) saturate(0.8) contrast(1.1) hue-rotate(15deg);
+}
+
+.theme-feb23 .gallery-grid img[src*="stylized"] {
+    /* If it's already a Guy Ritchie stylized image, we leave it alone or slightly tint it */
+    filter: sepia(0.2) hue-rotate(20deg);
+}
