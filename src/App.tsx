@@ -3,6 +3,7 @@ import './index.css';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import ComoTrip from './pages/ComoTrip';
+import ComoRealTrip from './pages/ComoRealTrip';
 import Footer from './components/Footer';
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/como" element={<ComoTrip />} />
+        <Route path="/comoreal" element={<ComoRealTrip />} />
       </Routes>
       <Footer />
     </Router>
