@@ -32,6 +32,23 @@ const ComoRealTrip: React.FC = () => {
                 </div>
             </div>
 
+            {/* Secondary Video Section */}
+            <div className="como-page__secondary-hero">
+                <video
+                    src="/como_bg2.mp4"
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    className="como-page__secondary-video"
+                />
+                <div className="como-page__secondary-overlay"></div>
+                <div className="container como-page__secondary-content">
+                    <h2>See you in Italy.</h2>
+                    <p>The ultimate away day awaits.</p>
+                </div>
+            </div>
+
             <div className="container">
                 <div className="como-page__grid">
                     {/* Left Column: Details */}
@@ -136,23 +153,6 @@ const ComoRealTrip: React.FC = () => {
                             <a href="/#contact" className="como-btn">I'm In</a>
                         </div>
                     </div>
-                </div>
-            </div>
-
-            {/* Closing Video Section */}
-            <div className="como-page__closing">
-                <video
-                    src="/como_bg2.mp4"
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                    className="como-page__closing-video"
-                />
-                <div className="como-page__closing-overlay"></div>
-                <div className="container como-page__closing-content">
-                    <h2>See you in Italy.</h2>
-                    <p>The ultimate away day awaits.</p>
                 </div>
             </div>
         </div>

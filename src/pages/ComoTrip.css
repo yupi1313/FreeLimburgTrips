@@ -406,8 +406,8 @@
     box-shadow: 0 4px 15px rgba(255, 204, 0, 0.3);
 }
 
-/* Closing Video Section */
-.como-page__closing {
+/* Secondary Video Section */
+.como-page__secondary-hero {
     position: relative;
     height: 60vh;
     min-height: 400px;
@@ -416,11 +416,11 @@
     justify-content: center;
     text-align: center;
     overflow: hidden;
-    margin-top: 4rem;
-    border-top: 1px solid var(--color-border);
+    margin-bottom: 4rem;
+    border-bottom: 1px solid var(--color-border);
 }
 
-.como-page__closing-video {
+.como-page__secondary-video {
     position: absolute;
     top: 0;
     left: 0;
@@ -431,23 +431,23 @@
     z-index: 1;
 }
 
-.como-page__closing-overlay {
+.como-page__secondary-overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to top, rgba(10, 10, 10, 0.9), rgba(10, 10, 10, 0.2));
+    background: linear-gradient(to bottom, rgba(10, 10, 10, 0.9), rgba(10, 10, 10, 0.2));
     z-index: 2;
 }
 
-.como-page__closing-content {
+.como-page__secondary-content {
     position: relative;
     z-index: 3;
     padding: 0 2rem;
 }
 
-.como-page__closing-content h2 {
+.como-page__secondary-content h2 {
     font-family: var(--font-heading);
     font-size: clamp(2.5rem, 5vw, 4rem);
     font-weight: 800;
@@ -456,7 +456,7 @@
     letter-spacing: 0.05em;
 }
 
-.como-page__closing-content p {
+.como-page__secondary-content p {
     font-size: 1.2rem;
     color: var(--color-text-muted);
 }
