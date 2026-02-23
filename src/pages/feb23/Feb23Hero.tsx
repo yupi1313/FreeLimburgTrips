@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { Star } from 'lucide-react';
-import '../components/Hero.css';
+import '../../components/Hero.css';
 
 const Feb23Hero: React.FC = () => {
     const heroRef = useRef<HTMLElement>(null);
