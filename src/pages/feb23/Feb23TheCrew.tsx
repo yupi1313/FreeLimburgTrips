@@ -6,8 +6,8 @@ const characters = [
         id: 'kon',
         name: "Конь",
         role: "Грубая сила",
-        image: "/photos/characters/kon.jpg",
-        description: "Обычно ломает вещи или людей. Мало говорит, много делает."
+        image: "/photos/characters/serega.jpeg",
+        description: "Ровный пацан. Всегда готов к следующему выезду."
     },
     {
         id: 'opelsin',
@@ -29,13 +29,6 @@ const characters = [
         role: "Голос Хаоса",
         image: "/photos/characters/dimon.jpg",
         description: "Серега давай вставай. Может купить всем пива, а может начать бунт."
-    },
-    {
-        id: 'serega',
-        name: "Серега",
-        role: "Новая кровь",
-        image: "/photos/characters/serega.jpeg",
-        description: "Ровный пацан. Всегда готов к следующему выезду."
     }
 ];
 

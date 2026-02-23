@@ -6,8 +6,8 @@ const characters = [
         id: 'kon',
         name: "Po Prozvishju Kon'",
         role: "The Muscle",
-        image: "/photos/characters/kon.jpg",
-        description: "Usually seen breaking things or people. Doesn't say much."
+        image: "/photos/characters/serega.jpeg",
+        description: "A solid lad. Ready for the next away day."
     },
     {
         id: 'opelsin',
@@ -27,15 +27,8 @@ const characters = [
         id: 'dimon',
         name: "Dimon",
         role: "The Wildcard",
-        image: "/photos/characters/serega.jpeg",
+        image: "/photos/characters/dimon.jpg",
         description: "Serjoga Davai Vstavai. Unpredictable. Might buy the next round, might start a riot."
-    },
-    {
-        id: 'sanja2',
-        name: "Sanja",
-        role: "The New Blood",
-        image: "/photos/characters/sanja2.jpeg",
-        description: "A solid lad. Ready for the next away day."
     }
 ];
 
