@@ -8,7 +8,7 @@ const Footer: React.FC = () => (
             <div className="footer__brand">
                 <a href="#" className="footer__logo">
                     <MapPin size={20} strokeWidth={2.5} />
-                    <span>Free<strong>LimburgTrips</strong></span>
+                    <span className="brand-part1">FreeLimburg</span><strong className="brand-part2">Trips</strong>
                 </a>
                 <p className="footer__tagline">Lads from Limburg. Football in Europe. Loads of beer.</p>
                 <div className="footer__socials">

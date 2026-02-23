@@ -38,6 +38,14 @@
     letter-spacing: -0.01em;
 }
 
+.navbar__logo .brand-part1 {
+    color: var(--color-primary);
+}
+
+.navbar__logo .brand-part2 {
+    color: var(--color-gold);
+}
+
 .navbar__logo svg {
     color: var(--color-gold);
 }

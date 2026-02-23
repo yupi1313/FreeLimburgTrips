@@ -23,7 +23,7 @@ const Navbar: React.FC = () => {
             <div className="container navbar__inner">
                 <a href="/" className="navbar__logo">
                     <MapPin size={22} strokeWidth={2.5} />
-                    <span>FreeLimburg<strong>Trips</strong></span>
+                    <span className="brand-part1">FreeLimburg</span><strong className="brand-part2">Trips</strong>
                 </a>
 
                 <nav className={`navbar__nav ${menuOpen ? 'navbar__nav--open' : ''}`}>

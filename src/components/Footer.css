@@ -26,7 +26,11 @@
     color: var(--color-gold);
 }
 
-.footer__logo strong {
+.footer__logo .brand-part1 {
+    color: var(--color-primary);
+}
+
+.footer__logo .brand-part2 {
     color: var(--color-gold);
     font-style: normal;
 }

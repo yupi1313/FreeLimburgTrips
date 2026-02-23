@@ -36,6 +36,13 @@ const characters = [
         role: "Eto ja raspe4tayu",
         image: "/photos/characters/sanja_print.jpg",
         description: "Always has the away block tickets printed and ready to go."
+    },
+    {
+        id: 'sanja2',
+        name: "Sanja",
+        role: "The New Blood",
+        image: "/photos/characters/sanja2.jpg",
+        description: "A solid lad. Ready for the next away day."
     }
 ];
 
